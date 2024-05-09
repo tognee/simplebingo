@@ -1,0 +1,51 @@
+dialog {
+  padding: 0px;
+  border: 0px;
+  background-color: transparent;
+
+  width: 65dvw;
+  height: 80dvh;
+
+  @media (orientation: portrait) {
+    width: 95dvw;
+    height: 95dvh;
+  }
+
+  & > div {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    & > header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        margin: 0;
+      }
+
+      [data-close-dialog] {
+        background-color: transparent;
+        color: var(--foreground-color);
+        border: none;
+      }
+    }
+
+    & > main {
+      flex-grow: 1;
+      padding: 1rem;
+      overflow: auto;
+    }
+
+    & > footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+  }
+}

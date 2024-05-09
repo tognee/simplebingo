@@ -1,0 +1,14 @@
+@use '../variables' as *;
+
+#settingsDialog {
+  textarea {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    border: 2px solid rgba($gray, 0.5);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.3;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "simplebingo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tognee <tognee64@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "notyf": "^3.10.0",
+    "textfit": "^2.4.0"
+  },
+  "devDependencies": {
+    "rollup": "^4.17.2",
+    "@eslint/js": "^9.2.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "commonjs": "^0.0.1",
+    "eslint": "^9.2.0",
+    "from": "^0.1.7",
+    "globals": "^15.1.0",
+    "import": "^0.0.6"
+  }
+}

@@ -1,0 +1,39 @@
+:root {
+  --background-color: #fff;
+  --foreground-color: #222;
+}
+
+// Add dark theme support
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #222;
+    --foreground-color: #fff;
+  }
+}
+
+html {
+  min-height: 100dvh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  font-family: Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#newBoard {
+  left: 1rem;
+  top: 1rem;
+}
+
+#settings {
+  right: 1rem;
+  top: 1rem;
+}
