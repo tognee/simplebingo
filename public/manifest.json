@@ -1,0 +1,40 @@
+{
+  "background_color": "#ffca99",
+  "icons": [
+    {
+      "src": "manifest/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "manifest/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-mono.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "monochrome"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "manifest/screenshot.png",
+      "type": "image/png",
+      "sizes": "750x750"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "left",
+  "lang": "en-US",
+  "name": "Simple Bingo",
+  "short_name": "Bingo",
+  "start_url": "index.html",
+  "scope": "/",
+  "description": "A simple customizable bingo app",
+  "id": "it.tognee.bingo"
+}
