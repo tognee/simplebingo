@@ -51,7 +51,10 @@ function restoreBoard() {
       card.innerText = data.name;
     }
   })
-  textFit(document.querySelectorAll('.card'));
+  textFit(document.querySelectorAll('.card'), {
+    multiLine: true,
+    reProcess: true,
+  });
 }
 
 export {

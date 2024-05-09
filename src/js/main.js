@@ -48,5 +48,8 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 window.addEventListener('resize', () => {
-  textFit(document.querySelectorAll('.card'));
+  textFit(document.querySelectorAll('.card'), {
+    multiLine: true,
+    reProcess: true,
+  });
 })
