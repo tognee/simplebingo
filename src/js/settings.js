@@ -10,8 +10,11 @@ function initSettings() {
     allCards = null;
   }
 
-  if (allCards) {
-    document.getElementById('allBingoCards').value = allCards;
+  if (!allCards ||allCards.trim() == '') {
+    window.localStorage.removeItem('allCards');
+    document.getElementById('allBingoCards').value = ""
+  } else {
+    document.getElementById('allBingoCards').value = allCards.trim();
   }
 }
 
