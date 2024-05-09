@@ -18,7 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
   restoreBoard();
 
   document.getElementById('newBoard').addEventListener('click', function() {
-    generateBoard();
     newGame();
     restoreBoard();
   });
