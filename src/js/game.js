@@ -5,6 +5,9 @@ const toast = new Notyf();
 function newGame() {
   const allCards = window.localStorage.getItem('allCards');
   const bingo = YAML.load(allCards);
+  const currentBoard = {}
+  window.localStorage.setItem('marked', '[]');
+  window.localStorage.setItem('currentBoard', JSON.stringify(currentBoard));
 
   if (!bingo || bingo.length < 25) {
     toast.error('Not enough cards');
@@ -13,7 +16,6 @@ function newGame() {
 
   // Bingo board is a 5x5 array
   // Fill it with random cards, no repeat
-  const currentBoard = {}
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 5; j++) {
       let card = bingo.splice(Math.floor(Math.random() * bingo.length), 1)[0];
@@ -21,7 +23,6 @@ function newGame() {
     }
   }
   // Reset datastore
-  window.localStorage.setItem('marked', '[]');
   window.localStorage.setItem('currentBoard', JSON.stringify(currentBoard));
   return currentBoard;
 }
