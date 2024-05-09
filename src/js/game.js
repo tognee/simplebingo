@@ -1,11 +1,13 @@
 import YAML from 'js-yaml';
+import { Notyf } from 'notyf';
+const toast = new Notyf();
 
 function newGame() {
   const allCards = window.localStorage.getItem('allCards');
   const bingo = YAML.load(allCards);
 
   if (!bingo || bingo.length < 25) {
-    window.alert('Not enough cards');
+    toast.error('Not enough cards');
     return;
   }
 
