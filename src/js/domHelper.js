@@ -39,8 +39,10 @@ function onCardClick(event) {
 }
 
 function restoreBoard() {
+  document.querySelectorAll('.card.selected').forEach(card => card.classList.remove('selected'));
   const marked = JSON.parse(window.localStorage.getItem('marked') || '[]');
   marked.forEach(card => document.getElementById(card).classList.add('selected'));
+  document.querySelectorAll('.card').forEach(card => card.innerHTML = '');
   const currentBoard = JSON.parse(window.localStorage.getItem('currentBoard') || '{}');
   Object.keys(currentBoard).forEach(pos => {
     const card = document.getElementById(pos)
