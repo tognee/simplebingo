@@ -24,8 +24,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('saveBingoCards').addEventListener('click', function() {
     const allCards = document.getElementById('allBingoCards').value;
-    window.localStorage.setItem('allCards', allCards);
-    toast.success('Saved!');
+    const savedCards = window.localStorage.getItem('allCards');
+    if (allCards != savedCards) {
+      window.localStorage.setItem('allCards', allCards);
+      window.localStorage.setItem('currentBoard', '{}');
+      window.localStorage.setItem('marked', '[]');
+      toast.success('Saved!');
+      restoreBoard();
+    }
   })
 
   document.getElementById('shareBingoCards').addEventListener('click', function() {
